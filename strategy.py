@@ -18,3 +18,8 @@ class More_then_N_percent_group_strategy:
 		self.percent = p
 
 	def perform_strategy(self):
+
+
+class Bla:
+	def __init__(self):
+		pass
