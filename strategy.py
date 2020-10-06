@@ -1,5 +1,5 @@
 from abc import ABC
-class Base_Strategy(ABC):
+class BaseStrategy(ABC):
 
 	def __init__(self, envs):
 		self.envelopes = envs
@@ -8,23 +8,6 @@ class Base_Strategy(ABC):
 		self.perform_strategy()
 
 	def perform_strategy(self):
-		pass
-
-
-class Automatic_Base_Strategy(BaseStrategy):
-    def __init__(self, envs):
-        super(self, envs)
-
-    def perform_startegy(self, counter):
-        rnd = random.randint(0, 99)
-        return self.envelopes[rnd]
-
-
-class Automatic_Base_Strategy(BaseStrategy):
-    def __init__(self, n):
-        super(self,n)
-
-    def perform_strategy(self):
         while envelope in self.EnvelopeArr:
             print(envelope.money)
             a = input("The amount is:" + envelope.money + " Take(T) or Leave(L)")
@@ -37,7 +20,15 @@ class Automatic_Base_Strategy(BaseStrategy):
             else:
                 print("Wrong Input Envelope Was Skipped")
         print("returning last envelope")
-        return(temp)
+
+
+class Automatic_BaseStrategy(BaseStrategy):
+    def __init__(self, envs):
+        super(self, envs)
+
+    def perform_startegy(self, counter):
+        rnd = random.randint(0, 99)
+        return self.envelopes[rnd]
 
 
 class More_then_N_percent_group_strategy(BaseStrategy):
