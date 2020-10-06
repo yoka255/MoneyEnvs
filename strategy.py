@@ -1,5 +1,5 @@
-
-class BaseStrategy:
+from abc import ABC
+class BaseStrategy(ABC):
 
 	def __init__(self, envs):
 		self.envelopes = envs
@@ -18,8 +18,11 @@ class More_then_N_percent_group_strategy:
 		self.percent = p
 
 	def perform_strategy(self):
-
-
-class Bla:
-	def __init__(self):
-		pass
+		n = len(envelopes)
+		best = 0
+			best = max(best, e.money)
+		for e in envelopes[(int)n*self.percent:-1]:
+			if e.money > best:
+				print(f"The envelope that was chosen contains {e.money}$")
+				return
+		print(f"The envelope that was chosen contains {envelopes[-1].money}$")
