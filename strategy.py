@@ -11,7 +11,7 @@ class BaseStrategy:
             print(envelope.money)
             a = input("The amount is:" + envelope.money + " Take(T) or Leave(L)")
             if(a == 'T'):
-                return envelope
+                print(envelope.money)
 
             elif(a=='L'):
                 pass
@@ -19,6 +19,7 @@ class BaseStrategy:
             else:
                 print("Wrong Input Envelope Was Skipped")
         print("returning last envelope")
+	print(envelope.money)
 
 
 class Automatic_BaseStrategy(BaseStrategy):
@@ -27,7 +28,7 @@ class Automatic_BaseStrategy(BaseStrategy):
 
     def perform_startegy(self, counter):
         rnd = random.randint(0, 99)
-        return self.envelopes[rnd]
+        print(self.envelopes[rnd].money)
 
 
 class More_then_N_percent_group_strategy(BaseStrategy):
@@ -57,8 +58,8 @@ class N_max_srategy(BaseStrategy):
         max = 0
         i = 0
         while count < self.n:
-            if self.envelopes[i] > max:
-                max = self.envelopes[i]
+            if self.envelopes[i].money > max:
+                max = self.envelopes[i].money
                 count += 1
             i += 1
-        return self.envelopes[i]
+        print(self.envelopes[i].money)
