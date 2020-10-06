@@ -37,7 +37,7 @@ class Automatic_BaseStrategy(BaseStrategy):
             else:
                 print("Wrong Input Envelope Was Skipped")
         print("returning last envelope")
-        return temp
+        return(temp)
 
 
 class More_then_N_percent_group_strategy:
