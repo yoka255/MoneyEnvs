@@ -7,7 +7,7 @@ class BaseStrategy:
 		self.perform_strategy()
 
 	def perform_strategy(self):
-        while envelope in self.EnvelopeArr:
+        while envelope in self.envelopes:
             print(envelope.money)
             a = input("The amount is:" + envelope.money + " Take(T) or Leave(L)")
             if(a == 'T'):
