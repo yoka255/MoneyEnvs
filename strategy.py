@@ -26,7 +26,7 @@ class Automatic_BaseStrategy(BaseStrategy):
     def __init__(self, envs):
         super(self, envs)
 
-    def perform_startegy(self, counter):
+    def perform_startegy(self):
         rnd = random.randint(0, 99)
         print(self.envelopes[rnd].money)
 
@@ -53,7 +53,7 @@ class N_max_srategy(BaseStrategy):
         super(self, envs)
         self.n = n
 
-    def perform_startegy(self, counter):
+    def perform_startegy(self):
         count = 1
         max = 0
         i = 0
