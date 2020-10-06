@@ -1,4 +1,3 @@
-from abc import ABC
 class BaseStrategy:
 
 	def __init__(self, envs):
