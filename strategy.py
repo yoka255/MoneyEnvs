@@ -1,5 +1,5 @@
 from abc import ABC
-class BaseStrategy(ABC):
+class BaseStrategy:
 
 	def __init__(self, envs):
 		self.envelopes = envs
