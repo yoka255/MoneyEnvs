@@ -48,7 +48,7 @@ class More_then_N_percent_group_strategy(BaseStrategy):
 		print(f"The envelope that was chosen contains {envelopes[-1].money}$")
 
 
-class N_max_srategy(BaseStrategy):
+class N_max_strategy(BaseStrategy):
     def __init__(self, envs, n):
         super(self, envs)
         self.n = n
