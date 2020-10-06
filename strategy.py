@@ -43,7 +43,7 @@ class Automatic_BaseStrategy(BaseStrategy):
 
     def perform_strategy(self):
         # Chooses a random envelope
-        rnd = random.randint(0, len(envelopes)-1)
+        rnd = random.randint(0, len(self.envelopes)-1)
         print("The amount is: " + str(self.envelopes[rnd].money))
 
     def display(self):
